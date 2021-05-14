@@ -1,7 +1,3 @@
-Contents
-
-[[_TOC_]]
-
 **controller**
 ====
 
@@ -18,8 +14,8 @@ A C++ library created for control systems, estimation and optimization in roboti
 
 The repository provides use case examples for each tool that is designed for this project.
 
-- [LQR Controller](https://10.11.0.10/robotics/rover/controller/-/blob/master/src/lqr_controller/example/lqr.cpp)
-- [PID Controller](https://10.11.0.10/robotics/rover/controller/-/blob/master/src/pid_controller/example/pid.cpp)
+- [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/lqr_controller/example/lqr.cpp)
+- [PID Controller](https://github.com/duckstarr/controller/blob/master/src/pid_controller/example/pid.cpp)
 
 **Importing controller to Workspace**
 ====
