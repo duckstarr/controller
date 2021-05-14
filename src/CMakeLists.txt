@@ -1,1 +1,2 @@
 add_subdirectory(pid_controller)
+add_subdirectory(lqr_controller)
