@@ -1,3 +1,8 @@
+/**
+ * @file pid_controller.h
+ * @brief PID Controller.
+ */
+
 #ifndef PID_CONTROLLER_H
 #define PID_CONTROLLER_H
 

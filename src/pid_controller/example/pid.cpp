@@ -1,3 +1,9 @@
+/**
+ * @file pid.cpp
+ * @brief A practical example on PID controllers.
+ * 
+ */
+
 #include "pid_controller.h"
 #include <iostream>
 #include <cstdlib>
