@@ -1,2 +1,2 @@
 add_subdirectory(control_system)
-add_subdirectory(filter)
+add_subdirectory(signal_processing)

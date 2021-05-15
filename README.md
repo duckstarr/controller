@@ -46,7 +46,7 @@ target_link_libraries(${PROJECT_NAME}
 #include "pid_controller.h"
 #include "mpc.h"
 
-// Filter.
+// Signal Processing.
 #include "kalman_filter.h"
 ```
 
