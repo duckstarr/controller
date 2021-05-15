@@ -1,69 +1,80 @@
 /**
- * @file kalman_filter.cpp
- * @brief Kalman Filter.
+ * @file kf_node.cpp
+ * @brief A practical example on Kalman Filter.
  * 
  */
 
 #include "kalman_filter.h"
 #include <Eigen/Dense>
 #include <iostream>
+#include <vector>
+#include <ctime>
 
 using namespace controller;
 
-KalmanFilter::KalmanFilter(
-    const Eigen::MatrixXd& A,
-    const Eigen::MatrixXd& C,
-    const Eigen::MatrixXd& Q,
-    const Eigen::MatrixXd& R,
-    const Eigen::MatrixXd& P
-    ):
-    A(A), C(C), Q(Q), R(R), P0(P),
-    m(C.rows()), n(A.rows()),
-    I(n, n), x_hat(n), x_hat_new(n),
-    initialized(false)
+int main(int argc, char* argv[])
 {
-    // Initialize the identity transformation.
-    I.setIdentity();
-}
+    int n = 3; // Number of states [position, velocity, acceleration].
+    int m = 1; // Number of measurements.
+    double dt = 1.0/30; // Timestamp.
 
-void KalmanFilter::init(double t0, const Eigen::VectorXd& x0)
-{
-    // Set parameters based on initial guess.
-    x_hat = x0;
-    P = P0;
-    this->t0 = t0;
-    initialized = true;
-}
+    // Declare MAT for Kalman filter computation.
+    Eigen::MatrixXd A(n, n); // System dynamics matrix
+    Eigen::MatrixXd C(m, n); // Output matrix
+    Eigen::MatrixXd Q(n, n); // Process noise covariance
+    Eigen::MatrixXd R(m, m); // Measurement noise covariance
+    Eigen::MatrixXd P(n, n); // Estimate error covariance
 
-void KalmanFilter::init()
-{
-    // Set parameters to zero.
-    x_hat.setZero();
-    P = P0;
-    t0 = 0;
-    initialized = true;
-}
+    // Measure the position only.
+    A << 
+        1, dt, 0, 
+        0, 1, dt, 
+        0, 0, 1;
 
-Eigen::VectorXd KalmanFilter::compute(const Eigen::VectorXd& y, double dt)
-{
-    // Error handling.
-    if(!this->initialized) throw std::runtime_error("Filter is not initialized!");
+    C << 1, 0, 0;
 
-    // Set the new state.
-    x_hat_new = A * x_hat;
+    // Reasonable covariance matrices
+    Q << 
+        .05, .05, .0, 
+        .05, .05, .0, 
+        .0, .0, .0;
 
-    // Predict error covariance.
-    P = A * P * A.transpose() + Q;
+    R << 1;
 
-    // Update Kalman gain.
-    K = P * C.transpose() * (C * P * C.transpose() + R).inverse();
+    P << 
+        .1, .1, .1, 
+        .1, 10000, 10, 
+        .1, 10, 100;
 
-    // Update estimate covariance.
-    P = (I - K * C) * P;
+    // Generate random values from 0 - 1.
+    std::srand(std::time(0));
+    std::vector<double> measurements;
 
-    // Update state.
-    x_hat_new += K * (y - C * x_hat_new);
-    x_hat = x_hat_new;
+    for(unsigned int i = 0; i < 100 ; i++)
+    {
+        double noise = ((double)std::rand() / (double)RAND_MAX);
+        measurements.push_back(noise);
+    }
 
-    return x_hat;
+    // Initialize Kalman filter.
+    KalmanFilter KF(A, C, Q, R, P);
+
+    // Start the Kalman filter with zero initial parameters.
+    KF.init();
+
+    // Feed the measurements to the filter and get estimated states of a system.
+    Eigen::VectorXd y(m);
+    for(unsigned int i = 0; i < measurements.size(); i++)
+    {
+        y << measurements[i];
+        std::cout << "KF Result 結果: " << KF.compute(y, dt).transpose() << std::endl;
+        
+        /** !Output.
+         * @brief KF Result 結果:  0.513434 -0.150251 -0.213232
+         * 
+         * @brief [position, velocity, acceleration]
+         */
+    }
+
+    return EXIT_SUCCESS;
 }
