@@ -10,7 +10,7 @@
 #include <vector>
 #include <ctime>
 
-using namespace controller;
+using namespace filter;
 
 int main(int argc, char* argv[])
 {

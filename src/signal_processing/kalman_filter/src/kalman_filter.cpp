@@ -8,7 +8,7 @@
 #include <Eigen/Dense>
 #include <iostream>
 
-using namespace controller;
+using namespace filter;
 
 KalmanFilter::KalmanFilter(
     const Eigen::MatrixXd& A,

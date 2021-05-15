@@ -9,7 +9,7 @@
 
 #include <Eigen/Dense>
 
-namespace controller
+namespace filter
 {
 
 class KalmanFilter
