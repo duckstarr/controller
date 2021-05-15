@@ -20,6 +20,7 @@ The repository provides use case examples for each tool that is designed for thi
 - [PID Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/pid_controller/example/pid.cpp)
 - [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/mpc/example/mpc.cpp)
 - [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/filter/kalman_filter/example/kalman.cpp)
+- [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/example/lpf.cpp)
 
 **Importing controller to Workspace**
 ====
