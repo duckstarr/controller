@@ -16,6 +16,7 @@ The repository provides use case examples for each tool that is designed for thi
 
 - [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/lqr_controller/example/lqr.cpp)
 - [PID Controller](https://github.com/duckstarr/controller/blob/master/src/pid_controller/example/pid.cpp)
+- [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/mpc/example/mpc.cpp)
 
 **Importing controller to Workspace**
 ====
@@ -39,6 +40,7 @@ target_link_libraries(${PROJECT_NAME}
 ```
 #include "lqr_controller.h"
 #include "pid_controller.h"
+#include "mpc.h"
 ```
 
 **Related Documentations**
