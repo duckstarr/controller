@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **controller**
 ====
 
@@ -14,10 +16,10 @@ A C++ library created for control systems, estimation and optimization in roboti
 
 The repository provides use case examples for each tool that is designed for this project.
 
-- [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/lqr_controller/example/lqr.cpp)
-- [PID Controller](https://github.com/duckstarr/controller/blob/master/src/pid_controller/example/pid.cpp)
-- [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/mpc/example/mpc.cpp)
-- [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/mpc/example/mpc.cpp)
+- [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/lqr_controller/example/lqr.cpp)
+- [PID Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/pid_controller/example/pid.cpp)
+- [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/mpc/example/mpc.cpp)
+- [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/filter/kalman_filter/example/kalman.cpp)
 
 **Importing controller to Workspace**
 ====
