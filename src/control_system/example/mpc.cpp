@@ -4,14 +4,14 @@
  * 
  */
 
-#include "mpc.h"
+#include <mpc.h>
 #include <iostream>
 #include <Eigen/Dense>
 #include <math.h>
 
 using namespace controller;
 
-int main(int argc, char* argv[])
+int main()
 {
     unsigned int x = 3; // Number of states [position x, position y, theta].
     unsigned int u = 2; // Input dimension [translation rate, rotation rate].
