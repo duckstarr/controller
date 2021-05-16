@@ -25,7 +25,7 @@ The repository provides use case examples for each tool that is designed for thi
 **Installing 'controller' Package**
 ====
 
-#### CMAKE Install.
+#### CMAKE Install
 ```
 mkdir build
 cd build
