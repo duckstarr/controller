@@ -11,6 +11,8 @@ add_library(${PROJECT_NAME}_lib SHARED
   src/lqr_controller.cpp
 )
 
+target_link_libraries(${PROJECT_NAME}_lib Eigen3::Eigen)
+
 # Install.
 install(TARGETS ${PROJECT_NAME}_lib
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
