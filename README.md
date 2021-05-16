@@ -22,22 +22,15 @@ The repository provides use case examples for each tool that is designed for thi
 - [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/filter/kalman_filter/example/kalman.cpp)
 - [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/example/lpf.cpp)
 
-**Importing 'controller' to Workspace**
+**Installing 'controller' Package**
 ====
 
-#### CMAKE 
+#### CMAKE Install.
 ```
-# Find package.
-find_package(controller REQUIRED)
-
-# Build.
-include_directories(
-  ${controller_INCLUDE_DIRS}
-)
-
-target_link_libraries(${PROJECT_NAME}
-  ${controller_LIBRARIES}
-)
+mkdir build
+cd build
+cmake ..
+cmake --build . --target install
 ```
 
 #### Include directories
@@ -57,6 +50,7 @@ target_link_libraries(${PROJECT_NAME}
 - Implement global planning algorithms (i.e., dijstra, RRT*, A*).
 - Dockerize & make ROS compatible.
 - CI/CD
+- Open to suggestions.
 
 **Related Documentations**
 ====
