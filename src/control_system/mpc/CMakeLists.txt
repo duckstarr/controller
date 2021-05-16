@@ -11,8 +11,11 @@ add_library(${PROJECT_NAME}_lib SHARED
   src/model_predictive_controller.cpp
 )
 
+target_link_libraries(${PROJECT_NAME}_lib Eigen3::Eigen)
+
 # Install.
 install(TARGETS ${PROJECT_NAME}_lib
+  EXPORT  ${PROJECT_NAME}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
