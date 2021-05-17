@@ -10,6 +10,12 @@ add_library(${PROJECT_NAME}_lib SHARED
   src/low_pass_filter.cpp
 )
 
+if(BUILD_EXAMPLES)
+  # Low-Pass filter example.
+  add_executable(${PROJECT_NAME}_example src/lpf.cpp)
+  target_link_libraries(${PROJECT_NAME}_example ${PROJECT_NAME}_lib)
+endif()
+
 # Install.
 install(TARGETS ${PROJECT_NAME}_lib
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}

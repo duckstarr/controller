@@ -5,7 +5,3 @@ add_subdirectory(mpc)
 if(BUILD_TESTS)
     add_subdirectory(test)
 endif()
-
-if(BUILD_EXAMPLES)
-    add_subdirectory(example)
-endif()

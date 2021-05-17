@@ -13,6 +13,12 @@ add_library(${PROJECT_NAME}_lib SHARED
 
 target_link_libraries(${PROJECT_NAME}_lib Eigen3::Eigen)
 
+if(BUILD_EXAMPLES)
+  # MPC Example.
+  add_executable(${PROJECT_NAME}_example src/mpc.cpp)
+  target_link_libraries(${PROJECT_NAME}_example ${PROJECT_NAME}_lib)
+endif()
+
 # Install.
 install(TARGETS ${PROJECT_NAME}_lib
   EXPORT  ${PROJECT_NAME}
