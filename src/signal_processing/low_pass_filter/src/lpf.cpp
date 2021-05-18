@@ -14,8 +14,8 @@ int main()
     // Create low-pass-filter.
     LPF LPF;
 
-    double input_signal = 5.0;
-    double cutoff_frequency = 2.0;
+    double input_signal = 1.0;
+    double cutoff_frequency = 1.0;
     double dt = 0.1;
     
     for(unsigned int i = 0; i < 15; i++)
@@ -25,21 +25,21 @@ int main()
 
     /**
      * @brief 
-     * LPF Output: 3.57695
-     * LPF Output: 4.59499
-     * LPF Output: 4.88473
-     * LPF Output: 4.96719
-     * LPF Output: 4.99066
-     * LPF Output: 4.99734
-     * LPF Output: 4.99924
-     * LPF Output: 4.99978
-     * LPF Output: 4.99994
-     * LPF Output: 4.99998
-     * LPF Output: 5
-     * LPF Output: 5
-     * LPF Output: 5
-     * LPF Output: 5
-     * LPF Output: 5
+     * LPF Output: 0.466512
+     * LPF Output: 0.71539
+     * LPF Output: 0.848164
+     * LPF Output: 0.918997
+     * LPF Output: 0.956786
+     * LPF Output: 0.976946
+     * LPF Output: 0.987701
+     * LPF Output: 0.993439
+     * LPF Output: 0.9965
+     * LPF Output: 0.998133
+     * LPF Output: 0.999004
+     * LPF Output: 0.999469
+     * LPF Output: 0.999716
+     * LPF Output: 0.999849
+     * LPF Output: 0.999919
      * 
      */
 
