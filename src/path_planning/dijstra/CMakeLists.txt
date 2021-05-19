@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 3.2 )
-project( dijstra )
+project( dijkstra )
 
 # Build.
 include_directories(
@@ -7,12 +7,12 @@ include_directories(
 )
 
 add_library(${PROJECT_NAME}_lib SHARED
-  src/dijstra.cpp
+  src/dijkstra.cpp
 )
 
 if(BUILD_EXAMPLES)
   # MPC Example.
-  add_executable(${PROJECT_NAME}_example src/dijstra_node.cpp)
+  add_executable(${PROJECT_NAME}_example src/dijkstra_node.cpp)
   target_link_libraries(${PROJECT_NAME}_example ${PROJECT_NAME}_lib)
 endif()
 
