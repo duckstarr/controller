@@ -1,1 +1,1 @@
-add_subdirectory(dijstra)
+add_subdirectory(dijkstra)
