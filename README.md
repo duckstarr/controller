@@ -16,11 +16,12 @@ A C++ library created for control systems, estimation and optimization in roboti
 
 The repository provides use case examples for each tool that is designed for this project.
 
-- [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/lqr_controller/example/lqr.cpp)
-- [PID Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/pid_controller/example/pid.cpp)
-- [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/mpc/example/mpc.cpp)
-- [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/filter/kalman_filter/example/kalman.cpp)
-- [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/example/lpf.cpp)
+- [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/lqr_controller/src/lqr.cpp)
+- [PID Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/pid_controller/src/pid.cpp)
+- [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/mpc/src/mpc.cpp)
+- [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/kalman_filter/src/kalman.cpp)
+- [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/src/lpf.cpp)
+- [Dijkstra](https://github.com/duckstarr/controller/blob/master/src/path_planning/dijstra/src/dijkstra_node.cpp)
 
 **Installing 'controller' Package**
 ====
@@ -31,18 +32,6 @@ mkdir build
 cd build
 cmake ..
 cmake --build . --target install
-```
-
-#### Include directories
-```
-// Control system.
-#include "lqr_controller.h"
-#include "pid_controller.h"
-#include "mpc.h"
-
-// Signal Processing.
-#include "kalman_filter.h"
-#include "low_pass_filter.h"
 ```
 
 **TODO**
@@ -61,3 +50,4 @@ cmake --build . --target install
 - [PID Controller](https://en.wikipedia.org/wiki/PID_controller)
 - [Algebraic Riccati equation](https://en.wikipedia.org/wiki/Algebraic_Riccati_equation)
 - [Signal Processing](https://en.wikipedia.org/wiki/Filter_(signal_processing))
+- [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
