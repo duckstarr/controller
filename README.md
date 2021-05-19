@@ -21,7 +21,7 @@ The repository provides use case examples for each tool that is designed for thi
 - [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/mpc/src/mpc.cpp)
 - [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/kalman_filter/src/kalman.cpp)
 - [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/src/lpf.cpp)
-- [Dijkstra](https://github.com/duckstarr/controller/blob/master/src/path_planning/dijstra/src/dijkstra_node.cpp)
+- [Dijkstra](https://github.com/duckstarr/controller/blob/master/src/path_planning/dijkstra/src/dijkstra_node.cpp)
 
 **Installing 'controller' Package**
 ====
@@ -36,7 +36,7 @@ cmake --build . --target install
 
 **TODO**
 ====
-- Implement global planning algorithms (i.e., dijstra, RRT*, A*).
+- Implement global planning algorithms (i.e., RRT*, A*).
 - Dockerize & make ROS compatible.
 - CI/CD
 - Open to suggestions.
