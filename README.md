@@ -22,6 +22,7 @@ The repository provides use case examples for each tool that is designed for thi
 - [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/kalman_filter/src/kalman.cpp)
 - [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/src/lpf.cpp)
 - [Dijkstra](https://github.com/duckstarr/controller/blob/master/src/path_planning/dijkstra/src/dijkstra_node.cpp)
+- [Breadth-first Search](https://github.com/duckstarr/controller/blob/master/src/path_planning/breadth_first_search/src/bfs.cpp)
 
 **Installing 'controller' Package**
 ====
