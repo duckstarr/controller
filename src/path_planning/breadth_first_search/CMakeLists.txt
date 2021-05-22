@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 3.2 )
-project( dijkstra )
+project( breadth_first_search )
 
 # Build.
 include_directories(
@@ -7,12 +7,12 @@ include_directories(
 )
 
 add_library(${PROJECT_NAME}_lib SHARED
-  src/dijkstra.cpp
+  src/breadth_first_search.cpp
 )
 
 if(BUILD_EXAMPLES)
-  # Dijkstra's Algorithm Example.
-  add_executable(${PROJECT_NAME}_example src/dijkstra_node.cpp)
+  # BFS Example.
+  add_executable(${PROJECT_NAME}_example src/bfs.cpp)
   target_link_libraries(${PROJECT_NAME}_example ${PROJECT_NAME}_lib)
 endif()
 
