@@ -41,7 +41,7 @@ cmake --build . --target install
 - CI/CD
 - Open to suggestions.
 
-**Related Documentations**
+**Related Wiki**
 ====
 
 - [Linear Quatratic Regulator](https://en.wikipedia.org/wiki/Linear%E2%80%93quadratic_regulator)
@@ -51,3 +51,4 @@ cmake --build . --target install
 - [Algebraic Riccati equation](https://en.wikipedia.org/wiki/Algebraic_Riccati_equation)
 - [Signal Processing](https://en.wikipedia.org/wiki/Filter_(signal_processing))
 - [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+- [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
