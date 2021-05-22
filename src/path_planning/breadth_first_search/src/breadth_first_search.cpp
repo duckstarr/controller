@@ -17,7 +17,7 @@ BFS::BFS(int V, int source) : V(V)
 {
     adjacent = new std::list<int> [V];
     label = new bool[V];
-    prediction.resize(V, -1);
+    predecessor.resize(V, -1);
 }
 
 void BFS::addEdge(const int v, const int w)
@@ -45,7 +45,7 @@ void BFS::startBFS(const int s)
                 label[*it] = true;
                 Q.push(*it); // Q.enqueue(w)
                 distance[*it] = distance[v] + 1;
-                prediction[*it] = v;
+                predecessor[*it] = v;
             }
         }
     }
@@ -56,10 +56,10 @@ std::vector<int> BFS::getShortestPath(int dest)
     std::vector<int> path;
     path.push_back(dest);
 
-    while(prediction[dest] != -1)
+    while(predecessor[dest] != -1)
     {
-        path.push_back(prediction[dest]);
-        dest = prediction[dest];
+        path.push_back(predecessor[dest]);
+        dest = predecessor[dest];
     }
 
     return path;

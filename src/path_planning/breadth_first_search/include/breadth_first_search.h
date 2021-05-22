@@ -62,7 +62,7 @@ class BFS
         bool * label; // visited node.
 
         std::list<int> * adjacent;
-        std::vector<int> prediction;
+        std::vector<int> predecessor;
 };
 
 } // namespace path_planning
