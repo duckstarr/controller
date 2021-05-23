@@ -23,6 +23,7 @@ The repository provides use case examples for each tool that is designed for thi
 - [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/src/lpf.cpp)
 - [Dijkstra](https://github.com/duckstarr/controller/blob/master/src/path_planning/dijkstra/src/dijkstra_node.cpp)
 - [Breadth-first Search](https://github.com/duckstarr/controller/blob/master/src/path_planning/breadth_first_search/src/bfs.cpp)
+- [Depth-first Search](https://github.com/duckstarr/controller/blob/master/src/path_planning/depth_first_search/src/dfs.cpp)
 
 **Installing 'controller' Package**
 ====
@@ -53,3 +54,4 @@ cmake --build . --target install
 - [Signal Processing](https://en.wikipedia.org/wiki/Filter_(signal_processing))
 - [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 - [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+- [Depth-first Search](https://en.wikipedia.org/wiki/Depth-first_search#:~:text=Depth%2Dfirst%20search%20(DFS),along%20each%20branch%20before%20backtracking.)
