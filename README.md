@@ -11,20 +11,6 @@ A C++ library created for control systems, estimation and optimization in roboti
 - [C++17](https://en.cppreference.com/w/cpp/17)
 - [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page#Download) C++ API
 
-**Usage**
-====
-
-The repository provides use case examples for each tool that is designed for this project.
-
-- [LQR Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/lqr_controller/src/lqr.cpp)
-- [PID Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/pid_controller/src/pid.cpp)
-- [Model Predictive Controller](https://github.com/duckstarr/controller/blob/master/src/control_system/mpc/src/mpc.cpp)
-- [Kalman Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/kalman_filter/src/kalman.cpp)
-- [Low-Pass Filter](https://github.com/duckstarr/controller/blob/master/src/signal_processing/low_pass_filter/src/lpf.cpp)
-- [Dijkstra](https://github.com/duckstarr/controller/blob/master/src/path_planning/dijkstra/src/dijkstra_node.cpp)
-- [Breadth-first Search](https://github.com/duckstarr/controller/blob/master/src/path_planning/breadth_first_search/src/bfs.cpp)
-- [Depth-first Search](https://github.com/duckstarr/controller/blob/master/src/path_planning/depth_first_search/src/dfs.cpp)
-
 **Installing 'controller' Package**
 ====
 
