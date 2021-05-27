@@ -4,35 +4,36 @@
  * 
  */
 
-#include "dijkstra.h"
+#include <dijkstra.hpp>
+#include <memory>
 #include <iostream>
 
 using namespace path_planning;
 
 int main()
 {
-    dijkstra dijkstra(9);
+    auto ptr = std::unique_ptr<dijkstra>(new dijkstra(9));
 
-    dijkstra.addEdge(0, 1, 4);
-    dijkstra.addEdge(0, 7, 8);
-    dijkstra.addEdge(1, 2, 8);
-    dijkstra.addEdge(1, 7, 11);
-    dijkstra.addEdge(2, 3, 7);
-    dijkstra.addEdge(2, 8, 2);
-    dijkstra.addEdge(2, 5, 4);
-    dijkstra.addEdge(3, 4, 9);
-    dijkstra.addEdge(3, 5, 14);
-    dijkstra.addEdge(4, 5, 10);
-    dijkstra.addEdge(5, 6, 2);
-    dijkstra.addEdge(6, 7, 1);
-    dijkstra.addEdge(6, 8, 6);
-    dijkstra.addEdge(7, 8, 7);
+    ptr->addEdge(0, 1, 4);
+    ptr->addEdge(0, 7, 8);
+    ptr->addEdge(1, 2, 8);
+    ptr->addEdge(1, 7, 11);
+    ptr->addEdge(2, 3, 7);
+    ptr->addEdge(2, 8, 2);
+    ptr->addEdge(2, 5, 4);
+    ptr->addEdge(3, 4, 9);
+    ptr->addEdge(3, 5, 14);
+    ptr->addEdge(4, 5, 10);
+    ptr->addEdge(5, 6, 2);
+    ptr->addEdge(6, 7, 1);
+    ptr->addEdge(6, 8, 6);
+    ptr->addEdge(7, 8, 7);
 
     int source = 0;
     int target = 5;
 
-    std::vector<double> distance = dijkstra.getShortestDistance(source);
-    std::vector<int> path = dijkstra.getShortestPath(source, target);
+    std::vector<double> distance = ptr->getShortestDistance(source);
+    std::vector<int> path = ptr->getShortestPath(source, target);
 
     std::cout << "Shortest distance from source to target: " << std::endl;
     for(auto i = distance.begin(); i != distance.end(); i++)

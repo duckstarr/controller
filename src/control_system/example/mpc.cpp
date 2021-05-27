@@ -4,7 +4,8 @@
  * 
  */
 
-#include <mpc.h>
+#include <mpc.hpp>
+#include <memory>
 #include <iostream>
 #include <Eigen/Dense>
 #include <math.h>
@@ -44,7 +45,7 @@ int main()
         0.0, 0.0, 1.0;
 
     // Initialize MPC and assign the MAT.
-    MPC MPC(Q, R, saturation);
+    auto ptr = std::unique_ptr<MPC>(new MPC(Q, R, saturation));
 
     // Get state error.
     Eigen::MatrixXd stateError(x, x);
@@ -58,7 +59,7 @@ int main()
     double numIteration = 100000;
     double tolarance = 1.E-5;
 
-    Eigen::MatrixXd cmd_vel = MPC.computeDiscrete(A, B, stateError, numIteration, tolarance, dt);
+    Eigen::MatrixXd cmd_vel = ptr->computeDiscrete(A, B, stateError, numIteration, tolarance, dt);
     std::cout << "\ncmd_vel.x\tcmd_vel.orientation.z\n" << cmd_vel(0,0) << "\t\t" << cmd_vel(0,1) << std::endl;
 
     /** !Output.

@@ -4,7 +4,8 @@
  * 
  */
 
-#include "lqr_controller.h"
+#include <lqr_controller.hpp>
+#include <memory>
 #include <Eigen/Dense>
 #include <iostream>
 
@@ -42,7 +43,7 @@ int main()
         0.0, 0.0, 1.0;
 
     // Initialize LQR controller and assign the MAT.
-    LQR LQR(Q, R);
+    auto ptr = std::unique_ptr<LQR>(new LQR(Q, R));
 
     // Get state error.
     Eigen::MatrixXd stateError(x, x);
@@ -52,7 +53,7 @@ int main()
         0.0, 0.0, 0.001;
 
     // Get velocity controller.
-    Eigen::MatrixXd cmd_vel = LQR.computeHamiltonian(A, B, stateError);
+    Eigen::MatrixXd cmd_vel = ptr->computeHamiltonian(A, B, stateError);
     std::cout << "\ncmd_vel.x\tcmd_vel.orientation.z\n" << cmd_vel(0,0) << "\t\t" << cmd_vel(0,1) << std::endl;
 
     /** !Output.

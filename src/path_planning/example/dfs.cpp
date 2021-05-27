@@ -4,7 +4,8 @@
  * 
  */
 
-#include "depth_first_search.h"
+#include <depth_first_search.hpp>
+#include <memory>
 #include <vector>
 #include <iostream>
 
@@ -12,16 +13,16 @@ using namespace path_planning;
 
 int main()
 {
-    DFS DFS(4);
+    auto ptr = std::unique_ptr<DFS>(new DFS(4));
 
-    DFS.addEdge(0, 1);
-    DFS.addEdge(0, 2);
-    DFS.addEdge(1, 2);
-    DFS.addEdge(1, 3);
-    DFS.addEdge(2, 0);
-    DFS.addEdge(3, 3);
+    ptr->addEdge(0, 1);
+    ptr->addEdge(0, 2);
+    ptr->addEdge(1, 2);
+    ptr->addEdge(1, 3);
+    ptr->addEdge(2, 0);
+    ptr->addEdge(3, 3);
 
-    auto path = DFS.startDFS(2);
+    auto path = ptr->startDFS(2);
 
     for(unsigned int i = 0; i < path->size(); i++)
     {

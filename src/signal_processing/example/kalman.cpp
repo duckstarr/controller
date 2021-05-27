@@ -4,8 +4,9 @@
  * 
  */
 
-#include "kalman_filter.h"
+#include <kalman_filter.hpp>
 #include <Eigen/Dense>
+#include <memory>
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -57,17 +58,17 @@ int main(int argc, char* argv[])
     }
 
     // Initialize Kalman filter.
-    KalmanFilter KF(A, C, Q, R, P);
+    auto KF = std::unique_ptr<KalmanFilter>(new KalmanFilter(A, C, Q, R, P));
 
     // Start the Kalman filter with zero initial parameters.
-    KF.init();
+    KF->init();
 
     // Feed the measurements to the filter and get estimated states of a system.
     Eigen::VectorXd y(m);
     for(unsigned int i = 0; i < measurements.size(); i++)
     {
         y << measurements[i];
-        std::cout << "KF Result 結果: " << KF.compute(y, dt).transpose() << std::endl;
+        std::cout << "KF Result 結果: " << KF->compute(y, dt).transpose() << std::endl;
         
         /** !Output.
          * @brief KF Result 結果:  0.513434 -0.150251 -0.213232

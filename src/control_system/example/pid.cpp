@@ -4,7 +4,8 @@
  * 
  */
 
-#include "pid_controller.h"
+#include <pid_controller.hpp>
+#include <memory>
 #include <iostream>
 
 using namespace controller;
@@ -21,8 +22,9 @@ int main()
     min = -5.0;
     max = 5.0;
 
-    PID PID(P, I, D, min, max);
-    auto velocity = PID.compute(4.0, 0.0, 0.1);
+    auto ptr = std::unique_ptr<PID>(new PID(P, I, D, min, max));
+
+    auto velocity = ptr->compute(4.0, 0.0, 0.1);
 
     /**
      * @brief velocity: 4.08

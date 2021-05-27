@@ -4,7 +4,8 @@
  * 
  */
 
-#include "low_pass_filter.h"
+#include <low_pass_filter.hpp>
+#include <memory>
 #include <iostream>
 
 using namespace filter;
@@ -12,7 +13,7 @@ using namespace filter;
 int main()
 {
     // Create low-pass-filter.
-    LPF LPF;
+    auto ptr = std::unique_ptr<LPF>(new LPF);
 
     double input_signal = 1.0;
     double cutoff_frequency = 1.0;
@@ -20,7 +21,7 @@ int main()
     
     for(unsigned int i = 0; i < 15; i++)
     {
-        std::cout << "LPF Output: " << LPF.computeStep(input_signal, cutoff_frequency, dt) << std::endl;
+        std::cout << "LPF Output: " << ptr->computeStep(input_signal, cutoff_frequency, dt) << std::endl;
     }
 
     /**
