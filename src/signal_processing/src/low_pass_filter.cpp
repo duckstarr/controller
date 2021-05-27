@@ -3,7 +3,7 @@
  * @brief Low-Pass Filter Lib.
  * 
  */
-#include "low_pass_filter.h"
+#include <low_pass_filter.hpp>
 #include <math.h>
 
 using namespace filter;

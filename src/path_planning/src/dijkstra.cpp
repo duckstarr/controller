@@ -4,7 +4,7 @@
  * 
  */
 
-#include "dijkstra.h"
+#include <dijkstra.hpp>
 #include <utility>
 #include <vector>
 #include <limits>

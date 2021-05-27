@@ -4,7 +4,7 @@
  * 
  */
 
-#include "mpc.h"
+#include <mpc.hpp>
 #include <Eigen/Dense>
 #include <iostream>
 

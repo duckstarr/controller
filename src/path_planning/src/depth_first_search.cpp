@@ -4,7 +4,7 @@
  * 
  */
 
-#include "depth_first_search.h"
+#include <depth_first_search.hpp>
 #include <vector>
 #include <list>
 #include <map>

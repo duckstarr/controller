@@ -4,7 +4,7 @@
  * 
  */
 
-#include "breadth_first_search.h"
+#include <breadth_first_search.hpp>
 #include <list>
 #include <queue>
 #include <vector>

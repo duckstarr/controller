@@ -4,7 +4,7 @@
  * 
  */
 
-#include "lqr_controller.h"
+#include <lqr_controller.hpp>
 #include <Eigen/Dense>
 
 using namespace controller;
