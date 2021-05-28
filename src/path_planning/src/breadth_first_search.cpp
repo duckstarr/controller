@@ -5,16 +5,14 @@
  */
 
 #include <breadth_first_search.hpp>
-#include <list>
 #include <queue>
 #include <vector>
 
 using namespace path_planning;
 
-BFS::BFS(int V, int source) : V(V)
+BFS::BFS(int V, int source) : V(V), adjacent(V)
 {
-    adjacent = new std::list<int> [V];
-    label = new bool[V];
+    label.resize(V, false);
     predecessor.resize(V, -1);
 }
 

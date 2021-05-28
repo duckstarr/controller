@@ -8,7 +8,6 @@
 #define DEPTH_FIRST_SEARCH_H
 
 #include <map>
-#include <list>
 #include <vector>
 
 namespace path_planning
@@ -42,13 +41,13 @@ class DFS
          * @param v Start vertex.
          * @return std::vector<int>* 
          */
-        std::vector<int> * startDFS(int v);
+        std::vector<int> startDFS(int v);
 
     private:
         int V; // number of vertex.
+        std::vector<std::vector<int>> adjacent; // adjacency list.
         std::map<int, bool> label;
-        std::list<int> * adjacent;
-        std::vector<int> * output;
+        std::vector<int> output;
 };
 
 } // namespace path_planning

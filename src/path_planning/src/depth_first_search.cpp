@@ -6,15 +6,12 @@
 
 #include <depth_first_search.hpp>
 #include <vector>
-#include <list>
 #include <map>
 
 using namespace path_planning;
 
-DFS::DFS(int V) : V(V)
+DFS::DFS(int V) : V(V), adjacent(V)
 {
-    adjacent = new std::list<int> [V];
-    output = new std::vector<int> [V];
 }
 
 void DFS::addEdge(int v, int w)
@@ -22,14 +19,17 @@ void DFS::addEdge(int v, int w)
     adjacent[v].push_back(w);
 }
 
-std::vector<int> * DFS::startDFS(int v)
+std::vector<int> DFS::startDFS(int v)
 {
     label[v] = true;
-    output->push_back(v);
+    output.push_back(v);
 
     for(auto u : adjacent[v])
     {
-        if(!label[u]) this->startDFS(u);
+        if(!label[u]) 
+        {
+            this->startDFS(u);
+        }
     }
 
     return output;

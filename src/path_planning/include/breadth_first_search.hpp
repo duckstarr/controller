@@ -7,7 +7,6 @@
 #ifndef BREADTH_FIRST_SEARCH_H
 #define BREADTH_FIRST_SEARCH_H
 
-#include <list>
 #include <vector>
 
 namespace path_planning
@@ -59,9 +58,8 @@ class BFS
 
     private:
         int V; // number of vertex.
-        bool * label; // visited node.
-
-        std::list<int> * adjacent;
+        std::vector<bool> label; // visited node.
+        std::vector<std::vector<int>> adjacent;  // adjacency list.
         std::vector<int> predecessor;
 };
 

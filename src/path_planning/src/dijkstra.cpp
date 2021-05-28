@@ -19,6 +19,11 @@ dijkstra::dijkstra(int V) : V(V)
     previous.resize(V);
 }
 
+dijkstra::~dijkstra()
+{
+    delete [] adjacent;
+}
+
 void dijkstra::addEdge(const int u, const int v, const double w)
 {
     adjacent[u].push_back(std::make_pair(v, w));

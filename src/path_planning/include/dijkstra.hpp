@@ -46,7 +46,7 @@ class dijkstra
          * @param V number of vertex.
          */
         dijkstra(int V);
-        ~dijkstra() {};
+        ~dijkstra();
 
         /**
          * @brief Create an stl graph based on the number of verticies and distances between them.
@@ -69,7 +69,7 @@ class dijkstra
 
     private:
         // A weighted graph that holds the number of nodes and the distance between them.
-        std::list<std::pair<int, double>> * adjacent;
+        std::list<std::pair<int, double>> * adjacent; // adjacency list.
 
         std::vector<int> previous;
         std::vector<double> distance;
