@@ -1,7 +1,19 @@
 /**
  * @file dfs.cpp
- * @brief A recursive implementation of DFS
- * 
+ * @brief !Valgrind output
+ *  Memcheck, a memory error detector
+ *  Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+ *  Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+ *  Command: ./src/path_planning/path_planning_dfs_example
+ *  
+ *  HEAP SUMMARY:
+ *      in use at exit: 0 bytes in 0 blocks
+ *    total heap usage: 21 allocs, 21 frees, 74,212 bytes allocated
+ *  
+ *  All heap blocks were freed -- no leaks are possible
+ *  
+ *  For lists of detected and suppressed errors, rerun with: -s
+ *  ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
  */
 
 #include <depth_first_search.hpp>
@@ -24,9 +36,9 @@ int main()
 
     auto path = ptr->startDFS(2);
 
-    for(unsigned int i = 0; i < path->size(); i++)
+    for(unsigned int i = 0; i < path.size(); i++)
     {
-        std::cout << "Path: " << path->at(i) << std::endl;
+        std::cout << "Path: " << path.at(i) << std::endl;
     }
 
     /**

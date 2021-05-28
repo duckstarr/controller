@@ -1,7 +1,19 @@
 /**
  * @file bfs.cpp
- * @brief Find the shortest path from a source to other vertices in an unweighted graph.
- * 
+ * @brief !Valgrind output
+ *  Memcheck, a memory error detector
+ *  Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+ *  Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+ *  Command: ./src/path_planning/path_planning_bfs_example
+ *  
+ *  HEAP SUMMARY:
+ *      in use at exit: 0 bytes in 0 blocks
+ *    total heap usage: 22 allocs, 22 frees, 74,756 bytes allocated
+ *  
+ *  All heap blocks were freed -- no leaks are possible
+ *  
+ *  For lists of detected and suppressed errors, rerun with: -s
+ *  ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
  */
 
 #include <breadth_first_search.hpp>

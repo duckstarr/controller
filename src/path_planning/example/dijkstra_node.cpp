@@ -1,7 +1,19 @@
 /**
  * @file dijkstra_node.cpp
- * @brief 
- * 
+ * @brief !Valgrind output
+ *  Memcheck, a memory error detector
+ *  Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+ *  Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+ *  Command: ./src/path_planning/path_planning_dijkstra_example
+ *  
+ *  HEAP SUMMARY:
+ *      in use at exit: 0 bytes in 0 blocks
+ *    total heap usage: 49 allocs, 49 frees, 75,648 bytes allocated
+ *  
+ *  All heap blocks were freed -- no leaks are possible
+ *  
+ *  For lists of detected and suppressed errors, rerun with: -s
+ *  ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
  */
 
 #include <dijkstra.hpp>
